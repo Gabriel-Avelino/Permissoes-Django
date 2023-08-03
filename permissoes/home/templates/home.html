@@ -1,0 +1,17 @@
+{% load permission_tags %} <!--Carrega as permissões para o HTML-->
+
+<!--Fazer verificação através da role-->
+<!--
+{% if user|has_role:'gerente' %}
+    Página do Gerente
+{% else %}
+    Você não tem acesso a essa página
+{% endif %}
+-->
+
+<!--Fazer verificação através da permissão-->
+{% if user|can:'ver_metas' %}
+    A meta é R$10 000,00
+{% else %}
+    Você não tem acesso a essa página
+{% endif %}
